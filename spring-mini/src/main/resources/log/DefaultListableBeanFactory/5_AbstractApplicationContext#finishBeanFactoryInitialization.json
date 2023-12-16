@@ -1,0 +1,220 @@
+{
+    "_INDEX_ROOT": "DefaultListableBeanFactory[@1593180232",
+    "beanDefinitionMap[@-363277969": {
+        "a": {
+            "_INDEX_MAP": "BeanDefinition[@1658926834",
+            "SCOPE_PROTOTYPE": "prototype",
+            "SCOPE_SINGLETON": "singleton",
+            "beanClass": "A.class",
+            "propertyValues[@1545242146": {
+                "propertyValueList":  [
+                    {
+                        "_INDEX_LIST_0": "PropertyValue[@102065302",
+                        "name": "b",
+                        "value[@63001505": {
+                            "beanName": "b"
+                        }
+                    }
+                ]
+            },
+            "prototype": "false",
+            "scope": "singleton",
+            "singleton": "true"
+        },
+        "b": {
+            "_INDEX_MAP": "BeanDefinition[@459848131",
+            "SCOPE_PROTOTYPE": "prototype",
+            "SCOPE_SINGLETON": "singleton",
+            "beanClass": "B.class",
+            "propertyValues[@750468423": {
+                "propertyValueList":  [
+                    {
+                        "_INDEX_LIST_0": "PropertyValue[@1384010761",
+                        "name": "a",
+                        "value[@295221641": {
+                            "beanName": "a"
+                        }
+                    }
+                ]
+            },
+            "prototype": "false",
+            "scope": "singleton",
+            "singleton": "true"
+        },
+        "beforeAdvice": {
+            "_INDEX_MAP": "BeanDefinition[@1279309709",
+            "SCOPE_PROTOTYPE": "prototype",
+            "SCOPE_SINGLETON": "singleton",
+            "beanClass": "ABeforeAdvice.class",
+            "propertyValues[@1344199921": {
+                "propertyValueList":  [
+                ]
+            },
+            "prototype": "false",
+            "scope": "singleton",
+            "singleton": "true"
+        },
+        "defaultAdvisorAutoProxyCreator": {
+            "_INDEX_MAP": "BeanDefinition[@1461149331",
+            "SCOPE_PROTOTYPE": "prototype",
+            "SCOPE_SINGLETON": "singleton",
+            "beanClass": "DefaultAdvisorAutoProxyCreator.class",
+            "propertyValues[@282821294": {
+                "propertyValueList":  [
+                ]
+            },
+            "prototype": "false",
+            "scope": "singleton",
+            "singleton": "true"
+        },
+        "factoryEnumApplicationListener": {
+            "_INDEX_MAP": "BeanDefinition[@510109800",
+            "SCOPE_PROTOTYPE": "prototype",
+            "SCOPE_SINGLETON": "singleton",
+            "beanClass": "FactoryEnumApplicationListener.class",
+            "propertyValues[@2027775614": {
+                "propertyValueList":  [
+                ]
+            },
+            "prototype": "false",
+            "scope": "singleton",
+            "singleton": "true"
+        },
+        "methodInterceptor": {
+            "_INDEX_MAP": "BeanDefinition[@364604425",
+            "SCOPE_PROTOTYPE": "prototype",
+            "SCOPE_SINGLETON": "singleton",
+            "beanClass": "MethodBeforeAdviceInterceptor.class",
+            "propertyValues[@1262773598": {
+                "propertyValueList":  [
+                    {
+                        "_INDEX_LIST_0": "PropertyValue[@688726285",
+                        "name": "advice",
+                        "value[@494317290": {
+                            "beanName": "beforeAdvice"
+                        }
+                    }
+                ]
+            },
+            "prototype": "false",
+            "scope": "singleton",
+            "singleton": "true"
+        },
+        "pointcutAdvisor": {
+            "_INDEX_MAP": "BeanDefinition[@1997287050",
+            "SCOPE_PROTOTYPE": "prototype",
+            "SCOPE_SINGLETON": "singleton",
+            "beanClass": "AspectJExpressionPointcutAdvisor.class",
+            "propertyValues[@2147046752": {
+                "propertyValueList":  [
+                    {
+                        "_INDEX_LIST_0": "PropertyValue[@182259421",
+                        "name": "expression",
+                        "value": "execution(* org.springframework.bean.A.func(..))"
+                    },
+                    {
+                        "_INDEX_LIST_1": "PropertyValue[@715378067",
+                        "name": "advice",
+                        "value[@2124643775": {
+                            "beanName": "methodInterceptor"
+                        }
+                    }
+                ]
+            },
+            "prototype": "false",
+            "scope": "singleton",
+            "singleton": "true"
+        }
+    },
+    "beanPostProcessors":  [
+        {
+            "_INDEX_LIST_0": "ApplicationContextAwareProcessor[@932285561",
+            "applicationContext[@2028555727": {
+                "APPLICATION_EVENT_MULTICASTER_BEAN_NAME": "applicationEventMulticaster",
+                "CLASSPATH_URL_PREFIX": "classpath:",
+                "CONVERSION_SERVICE_BEAN_NAME": "conversionService",
+                "applicationEventMulticaster[@296347592": {
+                    "applicationListeners":  [
+                        {
+                            "_INDEX_LIST_0": "FactoryEnumApplicationListener[@1101184763",
+                            "beanFactory": "DefaultListableBeanFactory@1593180232"
+                        }
+                    ],
+                    "beanFactory": "DefaultListableBeanFactory@1593180232"
+                },
+                "beanFactory": "DefaultListableBeanFactory@1593180232",
+                "configLocations":  [
+                    "classpath:circular-reference-with-proxy-bean.xml"
+                ]
+            }
+        },
+        {
+            "_INDEX_LIST_1": "DefaultAdvisorAutoProxyCreator[@572593338",
+            "beanFactory": "DefaultListableBeanFactory@1593180232",
+            "earlyProxyReferences":  [
+                "a", // +
+                "pointcutAdvisor",
+                "b", // +
+                "factoryEnumApplicationListener",
+                "methodInterceptor",
+                "beforeAdvice"
+            ]
+        }
+    ],
+    "disposableBeans[@0": {
+    },
+    "earlySingletonObjects[@0": {
+    },
+    "embeddedValueResolvers":  [
+    ],
+    "factoryBeanObjectCache[@0": {
+    },
+    "instantiationStrategy[@2025269734": {
+    },
+    "singletonFactories[@0": {
+    },
+    "singletonObjects[@132134519": { // +
+        "a": { // +
+            "_INDEX_MAP": "A$$EnhancerByCGLIB$$965475d6[@424398527", // +
+            "CGLIB$BOUND": "true", // +
+            "CGLIB$CALLBACK_FILTER": "@1678046232", // +
+            "CGLIB$FACTORY_DATA": "EnhancerFactoryData@252553541", // +
+            "CGLIB$THREAD_CALLBACKS[@1208203046": { // +
+                "HASH_INCREMENT": 1640531527, // +
+                "nextHashCode": 2119232183, // +
+                "threadLocalHashCode": 478700656 // +
+            }, // +
+            "CGLIB$clone$6$Method": "Object#clone", // +
+            "CGLIB$emptyArgs":  [ // +
+            ], // +
+            "CGLIB$equals$3$Method": "Object#equals", // +
+            "CGLIB$func$0$Method": "A#func", // +
+            "CGLIB$getB$2$Method": "A#getB", // +
+            "CGLIB$hashCode$5$Method": "Object#hashCode", // +
+            "CGLIB$setB$1$Method": "A#setB", // +
+            "CGLIB$toString$4$Method": "Object#toString" // +
+        },
+        "applicationEventMulticaster": "SimpleApplicationEventMulticaster@296347592",
+        "b": { // +
+            "_INDEX_MAP": "B[@390689829", // +
+            "a": "A$$EnhancerByCGLIB$$965475d6@424398527" // +
+        },
+        "beforeAdvice": "ABeforeAdvice@20049680",
+        "defaultAdvisorAutoProxyCreator": "DefaultAdvisorAutoProxyCreator@572593338",
+        "factoryEnumApplicationListener": "FactoryEnumApplicationListener@1101184763",
+        "methodInterceptor": {
+            "_INDEX_MAP": "MethodBeforeAdviceInterceptor[@2079179914",
+            "advice[@20049680": {
+            }
+        },
+        "pointcutAdvisor": {
+            "_INDEX_MAP": "AspectJExpressionPointcutAdvisor[@1816147548",
+            "expression": "execution(* org.springframework.bean.A.func(..))",
+            "pointcut[@1437654187": {
+                "SUPPORTED_PRIMITIVES":  [
+                    "PointcutPrimitive@22671767"
+                ]
+            }
+        }
+    }
+}
