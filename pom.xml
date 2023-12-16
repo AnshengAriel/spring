@@ -11,6 +11,7 @@
     <modules>
         <module>spring-mvc</module>
         <module>spring-mini</module>
+        <module>validator</module>
     </modules>
 
     <properties>
@@ -30,6 +31,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.30</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 
