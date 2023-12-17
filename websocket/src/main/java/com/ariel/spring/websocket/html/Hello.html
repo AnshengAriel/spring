@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 创建WebSocket连接:
+    var ws = new WebSocket('ws://' + location.host + '/chat');
+    // 连接成功时:
+    ws.addEventListener('open', function (event) {
+        console.log('websocket connected.');
+    });
+    // 收到消息时:
+    ws.addEventListener('message', function (event) {
+        console.log('message: ' + event.data);
+        var msgs = JSON.parse(event.data);
+        // TODO:
+    });
+    // 连接关闭时:
+    ws.addEventListener('close', function () {
+        console.log('websocket closed.');
+    });
+    // 绑定到全局变量:
+    window.chatWs = ws;
+</script>
+</body>
+</html>

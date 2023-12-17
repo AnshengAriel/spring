@@ -12,6 +12,7 @@
         <module>spring-mvc</module>
         <module>spring-mini</module>
         <module>validator</module>
+        <module>websocket</module>
     </modules>
 
     <properties>
@@ -34,5 +35,11 @@
             <scope>compile</scope>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+
+        </dependencies>
+    </dependencyManagement>
 
 </project>
